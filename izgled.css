@@ -1,0 +1,169 @@
+* {box-sizing: border-box;} 
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /*font-family: Marker Felt, fantasy;
+  background-image: url('slike test/memester_logo_rwa.jpg');*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.center {
+  margin: auto;
+  width: 1200px;
+}
+
+.header {                  
+  background-color: #0000;
+  text-align: center;
+  width: 1200px;
+  height: 202px;
+}
+
+
+/*nav_bar i dropdown menu*/
+
+.navbar {
+  background-color: rgb(238,249,255); 
+  width: 1200px;
+  overflow: hidden;
+} 
+
+.navbar a {
+  float: left;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  padding: 12px 20px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 20px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 12px 20px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: deepskyblue;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: deepskyblue;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);  /*dali manknut sjenu ili ne???*/
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  font-size: 16px;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: black;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.plavo {
+  float:right; 
+    background-color:deepskyblue;
+}
+
+.plavo a:hover {
+   background-color: black;
+     color: white;
+}
+
+/* dva nejednaka reda jedan pored drugoga */
+.column {
+  float: left;
+  height: 300px; /* visina redova (pole izbrisat) */
+
+ }
+
+/* Left and right column */
+.column.side {
+  width: 250px;
+}
+
+.sideMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sideMenu li {
+  border-bottom: 1px solid black;
+}
+
+.sideMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+.sideMenu li a:hover {
+  background-color: black;
+  color: white;
+}
+
+/*desni red */
+.column.middle {
+  width: 950px;
+}
+
+
+/* dno dna, footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 15px;
+  text-align: center;
+  width: 1200px;
+}
+
+/*liste*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Clear floats after the columns (CLEARFIXs)*/
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other
+@media (max-width: 600px) {
+    .column.side, .column.middle {
+    width: 100%;
+  }
+}
+*/
