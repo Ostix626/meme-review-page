@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+<title>Memester Login</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="izgled.css" />
+</head>
+
+<body>
+<div class="center">
+
+
+<div class="header">
+  <img src="slike/memester_logo_rwa.jpg" width="1200px">
+</div>
+
+
+<div class = "navbar"> 
+  <a href = "index.html">Home</a> 
+
+  <div class="dropdown">
+    <button class="dropbtn">Categories
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Star Wars</a>
+      <a href="#">Slav</a>
+      <a href="#">...</a>
+    </div>
+  </div> 
+  
+  <div class="dropdown">
+    <button class="dropbtn">Templates
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Cesa</a>
+      <a href="#">Angry woman and a cat</a>
+      <a href="#">...</a>
+    </div>
+  </div> 
+  
+  <span class="plavo"><a href = "login.html" >Login</a></span>
+  <span class="plavo"><a href = "register.html" >Register</a></span>
+  
+</div> 
+
+
+
+
+<div class="row">
+  <div class="column side" style="background-color:rgba(221,221,221,0.98);">
+    <ul class="sideMenu">
+      <li><a href="#">MEME of the DECADE</a></li>
+      <li><a href="#">meme of the month</a></li>
+      <li><a href="https://www.youtube.com/watch?v=tJWChYAU5vk&list=PLYH8WvNV1YEn_iiBMZiZ2aWugQfN1qVfM" target="_blank">meme review</a></li>
+      <li><a href="#">meme awards</a></li>
+      <li><a href="#">dead memes (RIP)</a></li>
+      <li><a href="#">top 10 memes</a></li>
+    </ul>
+  </div>
+
+
+  <div class="column middle" style="background-color:#0000; height:auto;">
+    <div class="login">
+      <div class="lgn_left">
+        <h1>login</h1>
+        <p>Please enter your username and password</p>
+      </div>
+      <div class="lgn_right">
+        <form method="POST" action="login.php">
+          <input class="field" type="text" placeholder="Username" id="username">  
+          <input class="field" type="password" placeholder="Password" id="password">  
+          <input class="btn" type="submit" value="LOGIN">
+        <form>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="footer">
+  <p>Footer</p>
+</div>
+
+
+</div>
+</body>
+</html>

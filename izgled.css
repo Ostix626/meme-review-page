@@ -97,10 +97,12 @@ body {
      color: white;
 }
 
+
+
 /* dva nejednaka reda jedan pored drugoga */
 .column {
   float: left;
-  height: 300px; /* visina redova (pole izbrisat) */
+ /*  height: 300px; /* visina redova (pole izbrisat) */
 
  }
 
@@ -150,6 +152,34 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+/*login forma*/
+.login { 
+  width:950px;
+  padding:0px 30px;
+  color:black;
+}
+
+.field { 
+  background:#b7e4fb;
+  border:1px #03306b solid;
+  padding:10px;
+  margin:5px 25px;
+  width:215px;
+  color:black;
+ }
+
+.login h1, p, .chbox, .btn {
+  margin-left:25px;
+}
+
+.btn {
+  background-color: #00CCFF;
+  border:1px #03306b solid;
+  padding:10px 30px;
+  font-weight:bold;
+  margin:25px 25px;
 }
 
 
