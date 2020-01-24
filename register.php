@@ -8,29 +8,21 @@
     <body>
         <form method="post" action="register.php">
             <label for="usern">Username</label>
-            <input type="text" name="usern" id="user">
+            <input type="text" name="usern" id="user" required>
             <label for="pass">Password</label>
-            <input type="password" name="pass" id="pass">
+            <input type="password" name="pass" id="pass" required>
             <label for="email">E-Mail</label>
-            <input type="text" name="email" id="email">
+            <input type="text" name="email" id="email" required>
             <input type="submit" name="submit" value="Sign Up">
         </form>
     </body>
 </html>
 
 <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "memester66";
-    $dbname = "memester";
-    
-    // Stvaranje konekcije na bazu
-    $conn = new mysqli($servername, $username, $password, $dbname);
 
-    // Provjera uspjesnosti spajanja na bazu
-    if ($conn->connect_error) {
-        die("Uspostavljanje konekcije na bazu nije uspjelo: ". $conn->connect_error);
-    }  
+	include 'check_reg.php'
+
+	/*include 'connect.php';
     
     if(isset($_POST['usern']) && isset($_POST['pass']) && isset($_POST['email'])) {
     	$psw = password_hash($_POST['pass'], PASSWORD_DEFAULT);
@@ -39,5 +31,5 @@
         $sql_query->execute();
         $result = $sql_query->get_result();
         $sql_query->close();
-    }
+    }*/
 ?>
