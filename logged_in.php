@@ -41,7 +41,7 @@
   <img src="slike/memester_logo_rwa.jpg" width="1200px">
 </div>
 
-<?php include 'logged_navbar.php'; ?>
+<?php include 'navbar.php'; ?>
 
 <div class="row">
   <div class="column side" style="background-color:rgba(221,221,221,0.98);">
