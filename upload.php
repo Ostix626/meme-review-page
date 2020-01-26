@@ -68,7 +68,7 @@ if(isset($_POST["submit"])) {
 */
         $sql_query = $conn->prepare("INSERT INTO memes (upvotes, downvotes, category, upload_date, uploader, meme_of_the_decade, filepath) VALUES (?, ?, ?, ?, ?, ?, ?)");
         $sql_query->bind_param('iisssis', $zero, $zero, $category, $date, $user, $zero, $path_img);
-        if($sql_query->execute() == TRUE) echo "New record created successfully";
+        if($sql_query->execute() == TRUE) $ispis .= "<br> New meme uploaded successfully";
         $result = $sql_query->get_result();
         $sql_query->close();
   }
