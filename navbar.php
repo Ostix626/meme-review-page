@@ -50,10 +50,17 @@ if (!isset($_SESSION['user'])) {
   echo '</div> ';
 
   echo '<span class="plavo"><a href = "upload.php" >Upload</a></span>';
-  echo '<span class="plavo"><a href = "logout.php" >Logout</a></span>';
-  echo '<span class="plavo">' . $_SESSION["user"] . '</span>';
-  
-  echo '</div> ';
+  echo '<span class="plavo">';
+    echo ' <div class="dropdown">';
+      echo ' <button class="dropbtn">Hello there  ' . $_SESSION["user"] . '';
+        echo ' <i class="fa fa-caret-down"></i>';
+     echo ' </button>';
+     echo ' <div class="dropdown-content">';
+       echo ' <a href="logout.php">Logout</a>';
+     echo ' </div>';
+   echo ' </div> ';
+   echo ' </div> ';
+   echo ' </span>';
 }
 
 ?>

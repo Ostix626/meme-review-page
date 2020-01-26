@@ -1,7 +1,7 @@
 <?php 
 
   include 'connect.php';
-
+  $ispis = null;
   if(isset($_POST['username']) && isset($_POST['password'])) {
     $user = $_POST['username'];
     $pass = md5($_POST['password']);
@@ -16,7 +16,7 @@
       $_SESSION['pass'] = $pass;
       header("Location: index.php");
     }else {
-      echo 'Invalid username/password';
+      $ispis .= 'Invalid username/password';
     }
   }
 ?>

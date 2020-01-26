@@ -1,3 +1,9 @@
+<?php 
+
+  include 'check_login.php';
+  
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>  
@@ -40,6 +46,9 @@
           <input class="textField" type="password" name="password" placeholder="Password" id="password">  
           <input class="btn" type="submit" value="LOGIN">
         <form>
+          <p style="margin-left:25px;">
+          <?php echo "$ispis"; ?> 
+          </p>
       </div>
     </div>
   </div>
@@ -55,9 +64,3 @@
 </div>
 </body>
 </html>
-
-<?php 
-
-  include 'check_login.php';
-  
-?>

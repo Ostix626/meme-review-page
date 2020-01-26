@@ -6,7 +6,7 @@
 if(!$conn){
   die("Database Connection Failed" . mysqli_error($conn));
 }*/
-
+  $ispis = null;
   if(isset($_POST['usern']) && isset($_POST['pass']) && isset($_POST['email'])) {
     $psw = md5($_POST['pass']);
     $un = $_POST['usern'];
@@ -17,9 +17,9 @@ if(!$conn){
     $res_e = mysqli_query($conn, $sql_e);
 
     if (mysqli_num_rows($res_u) > 0) {
-      echo 'Username already taken';  
+      $ispis .= 'Username already taken';  
     }else if(mysqli_num_rows($res_e) > 0){
-      echo  'Email already taken';
+      $ispis .= 'Email already taken';
     }else {
       $sql_query = $conn->prepare("INSERT INTO user (user_mail, user_name, user_pass) VALUES (?, ?, ?)");
       $sql_query->bind_param('sss', $_POST['email'], $_POST['usern'], $psw);
