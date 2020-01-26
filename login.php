@@ -59,26 +59,5 @@
 <?php 
 
   include 'check_login.php';
-
-  /*if (!isset($username) or !isset($password)) {
-    header( "Location: http://localhost/RWA/index.php" );
-  } elseif (empty($username) or empty($password)) {
-    header( "Location: http://localhost/RWA/index.php" );
-  }else {
-    $user = $_POST['username'];
-    $pass = password_hash($_POST['password'], POASSWORD_DEFAULT);
-
-    $sql_up = "SELECT * FROM user WHERE user_name='" . $user . "' AND user_pass='" . $pass . "'";
-    $res_up = mysqli_query($conn, $sql_up);
-
-    if (mysqli_num_rows($res_up) > 0){
-      $time = time();
-      session_start();
-      $_SESSION['user'] = $user;
-      $_SESSION['time'] = $time;
-      header( "Location: logged_in.php" );
-    } else {
-      echo 'Nepostojeci username i/ili password.';
-    }
-  }*/
+  
 ?>

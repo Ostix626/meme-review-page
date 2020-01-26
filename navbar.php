@@ -29,7 +29,7 @@ if (!isset($_SESSION['user'])) {
   echo '</div> ';
 }else {
   echo '<div class = "navbar"> ';
-  echo '<a href = "logged_in.php">Home</a> ';
+  echo '<a href = "index.php">Home</a> ';
 
   echo '<div class="dropdown">';
     echo '<button class="dropbtn">Categories';
@@ -50,7 +50,7 @@ if (!isset($_SESSION['user'])) {
   echo '</div> ';
 
   echo '<span class="plavo"><a href = "upload.php" >Upload</a></span>';
-  echo '<span class="plavo"><a href = "login.php" >Logout</a></span>';
+  echo '<span class="plavo"><a href = "logout.php" >Logout</a></span>';
   echo '<span class="plavo">' . $_SESSION["user"] . '</span>';
   
   echo '</div> ';
