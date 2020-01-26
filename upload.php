@@ -1,7 +1,7 @@
 <?php
 session_start();
 $user = 'anonymus';
-if (!empty($_SESSION['username'])) $user = $_SESSION['username'];
+if (isset($_SESSION['user'])) $user = $_SESSION['user'];
 
 
 
