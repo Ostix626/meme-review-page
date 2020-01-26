@@ -4,10 +4,12 @@ $user = 'anonymus';
 if (!empty($_SESSION['username'])) $user = $_SESSION['username'];
 
 
+
+
 error_reporting(E_ALL ^ E_NOTICE);
 error_reporting(0);
 $target_dir = "uploads/";
-$target_file = $target_dir . sha1(date("h:i:sa Y-m-d")) . "." .basename($_FILES['fileToUpload']['type']);
+$target_file = $target_dir . sha1(date("h:i:sa Y-m-d")) . "." .basename($_FILES['fileToUpload']['type']); // putanja 
 $uploadOk = 1;
 $ispis = null;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -48,6 +50,28 @@ if(isset($_POST["submit"])) {
           $ispis .= "<br> Sorry, there was an error uploading your meme.";
       }
   } 
+
+  // ako je sve u redu onda ce spremit podatke u database
+  if ($uploadOk == 1) {
+    include("connect.php");
+    //echo "Connected successfully";
+    $image_name = basename($_FILES["fileToUpload"]["name"]);
+    $image_tmp_name = $_FILES["fileToUpload"]["tmp_name"]; 
+    $path_img = $target_file;
+    $category = $_POST['category'];
+    $date = date("Y-m-d H:i:s");
+    $zero = 0;
+/*
+    $query = "INSERT INTO memes (upvotes, downvotes, category, upload_date, uploader, meme_of_the_decade, filepath) 
+    VALUES (0, 0, '$category', '$date', '$user', 0, '$path_img'";
+    mysqli_query($conn, $query);
+*/
+        $sql_query = $conn->prepare("INSERT INTO memes (upvotes, downvotes, category, upload_date, uploader, meme_of_the_decade, filepath) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        $sql_query->bind_param('iisssis', $zero, $zero, $category, $date, $user, $zero, $path_img);
+        if($sql_query->execute() == TRUE) echo "New record created successfully";
+        $result = $sql_query->get_result();
+        $sql_query->close();
+  }
 } 
 ?>
 
@@ -82,8 +106,20 @@ if(isset($_POST["submit"])) {
   <div class="column middle" style="background-color:#0000;">
     <form action="upload.php" method="post" enctype="multipart/form-data">
     Select meme to upload:
-    <input type="file" name="fileToUpload" id="fileToUpload"> 
-    <input type="submit" value="Upload Image" name="submit">
+    <input type="file" name="fileToUpload" id="fileToUpload"> <br><br>
+    <input type="submit" value="Upload Image" name="submit"> <br><br>
+
+    Category: <br><br>
+    <input type="radio" name="category" value="Star Wars"> Star Wars<br>
+    <input type="radio" name="category" value="Shrek"> Shrek<br>
+    <input type="radio" name="category" value="Domaci"> Domaci<br>
+    <input type="radio" name="category" value="Animals"> Animals<br>
+    <input type="radio" name="category" value="Elon Musk"> Elon Musk<br>
+    <input type="radio" name="category" value="Cartoon"> Cartoon<br>
+    <input type="radio" name="category" value="Deep-fried"> Deep-fried<br>
+    <input type="radio" name="category" value="Riteh"> Riteh<br>
+    <input type="radio" name="category" value="Slav"> Slav<br>
+    <input type="radio" name="category" value="Dark humor" checked> Dark humor<br><br><br>
     </form>
     <?php echo "$ispis" ?>
   </div>
