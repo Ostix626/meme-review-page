@@ -8,7 +8,7 @@ if(!$conn){
 }*/
 
   if(isset($_POST['usern']) && isset($_POST['pass']) && isset($_POST['email'])) {
-    $psw = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+    $psw = md5($_POST['pass']);
     $un = $_POST['usern'];
     $em = $_POST['email'];
     $sql_u = "SELECT * FROM user WHERE user_name='$un'";
@@ -26,6 +26,7 @@ if(!$conn){
       $sql_query->execute();
       $result = $sql_query->get_result();
       $sql_query->close();
+      header("Location: index.php");
     }
   }
 ?>
