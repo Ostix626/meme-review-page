@@ -33,7 +33,7 @@
   <div class="column middle" style="background-color:#0000;">
     <div class="login">
       <div class="lgn_left">
-        <h1>Rgister</h1>
+        <h1>Register</h1>
         <p>Please enter your E-mail, username and password</p><br>
       </div>
       <div class="lgn_right">
