@@ -1,9 +1,7 @@
 <?php
 session_start();
-$user = 'anonymus';
+$user = 'anonymous';
 if (isset($_SESSION['user'])) $user = $_SESSION['user'];
-
-
 
 
 error_reporting(E_ALL ^ E_NOTICE);
