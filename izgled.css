@@ -20,14 +20,13 @@ body {
   align-items: flex-start;
   /*justify-content: center;
   flex-flow:column wrap;*/
-  padding: 2px;
 }
 
 .flex-container div {
   background-color: #f1f1f1;
   /*border: 1px solid #ccc;*/
   width: 465px;
-  margin: 4px;
+  margin: 5px;
   text-align: center;
   box-shadow: 4px 3px 7px 0px rgba(0, 0, 0, 0.3);
 }
