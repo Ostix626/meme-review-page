@@ -36,8 +36,11 @@
     <div class="flex-container">
 
       <?php
-        $query = "SELECT * FROM memes ORDER BY `upload_date` DESC LIMIT 40";
-        $stmt = $conn->prepare($query);
+        $category = $_GET['category'];
+        if(empty($category)) echo "sjebalo se sve";
+        $query = "SELECT * FROM memes WHERE category=`$category` ORDER BY `upload_date` DESC LIMIT 40";
+        $stmt = $conn->prepare("SELECT * FROM memes WHERE category=? ORDER BY `upload_date` DESC LIMIT 40");
+        $stmt->bind_param('s', $_GET['category']);
         $stmt->execute();
         $result = $stmt->get_result();
 
