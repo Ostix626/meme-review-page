@@ -46,13 +46,21 @@
 
             echo "<div>";
               echo "<img src='" . $row['filepath'] . "' >";
-              echo "<table>";
+              echo "<table class='tablica'>";
                 echo "<tr>";
-                  echo "<td>1</td>";
-                  echo "<td>2</td>";
-                  echo "<td>3</td>";
-                  echo "<td>4</td>";
-                  echo "<td>5</td>";
+                  echo '<td>
+                    <a href="upvote.php">
+                    <img src="slike/upvote.PNG"
+                    width="30px">
+                   </td>';
+                  echo "<td>" . $row['upvotes'] . "</td>";
+                  echo "<td> </td>";
+                  echo "<td>" . $row['downvotes'] . "</td>";
+                  echo '<td>
+                    <a href="downvote.php">
+                    <img src="slike/downvote.PNG"
+                    width="30px">
+                    </td>';
                 echo "</tr>";
               echo "</table>";
             echo "</div>";
