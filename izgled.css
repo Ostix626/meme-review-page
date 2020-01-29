@@ -226,11 +226,11 @@ ul {
   margin:25px 25px;
 }
 
-/*.upload { 
+.upload { 
   width:950px;
   padding:0px 30px;
   color:black;
-  margin-left:100px;
+  margin-left:70px;
 }
 
 .file {
@@ -253,15 +253,15 @@ ul {
 	width:300px;
   padding:0px 30px;
   color:black;
-  margin-left:100px;
+  margin-left:70px;
 }
 
 .categories {
 	width:20px;
   padding:0px 30px;
   color:black;
-  margin-left:125px;
-}*/
+  margin-left:100px;
+}
 
 
 /* Clear floats after the columns (CLEARFIXs)*/
