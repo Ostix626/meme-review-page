@@ -36,15 +36,24 @@
     <div class="flex-container">
 
       <?php
-        $category = $_GET['category'];
-        if(empty($category)) echo "Nije odabrana kategorija";
-        $query = "SELECT * FROM memes WHERE category=`$category` ORDER BY `upload_date` DESC LIMIT 40";
-        $stmt = $conn->prepare("SELECT * FROM memes WHERE category=? ORDER BY `upload_date` DESC LIMIT 40");
-        $stmt->bind_param('s', $_GET['category']);
+
+
+        $datum = date("Y/m/d", strtotime("-1 months"));
+        /*
+        if(empty($datum)) echo "nema datuma";
+        else echo $datum;
+        */
+        $query = "SELECT * FROM memes WHERE upload_date <= '".$datum."' ORDER BY upload_date DESC LIMIT 40";
+        /*
+        $stmt = $conn->prepare($query);
+        $stmt = $conn->prepare("SELECT * FROM memes WHERE upload_date<=? ORDER BY `upload_date` DESC LIMIT 40");
+        $stmt->bind_param('s', $datum);
         $stmt->execute();
         $result = $stmt->get_result();
+        */
+        $result = mysqli_query($conn, $query);
 
-        if ($result->num_rows > 0) {
+        if (mysqli_num_rows($result) > 0) {
           while($row = $result->fetch_array(MYSQLI_BOTH)) {
 
             echo "<div>";
