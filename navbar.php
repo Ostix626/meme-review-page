@@ -56,6 +56,7 @@ if (!isset($_SESSION['user'])) {
         echo ' <i class="fa fa-caret-down"></i>';
      echo ' </button>';
      echo ' <div class="dropdown-content">';
+       echo '<a href="mymemes.php?name=' . $_SESSION["user"] . '">My memes</a>';
        echo ' <a href="logout.php">Logout</a>';
      echo ' </div>';
    echo ' </div> ';
