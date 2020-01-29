@@ -103,7 +103,6 @@ if(isset($_POST["submit"])) {
 
   <div class="column middle" style="background-color:#0000;">
     <form action="upload.php" method="post" enctype="multipart/form-data">
-    <br>
     <h1 class="upload" >Select meme to upload:</h1><br>
     <input class="file" type="file" name="fileToUpload" id="fileToUpload"> <br><br>
 
