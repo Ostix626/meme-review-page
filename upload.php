@@ -103,21 +103,30 @@ if(isset($_POST["submit"])) {
 
   <div class="column middle" style="background-color:#0000;">
     <form action="upload.php" method="post" enctype="multipart/form-data">
-    Select meme to upload:
-    <input type="file" name="fileToUpload" id="fileToUpload"> <br><br>
-    <input type="submit" value="Upload Image" name="submit"> <br><br>
+    <br>
+    <h1 class="upload" >Select meme to upload:</h1><br>
+    <input class="file" type="file" name="fileToUpload" id="fileToUpload"> <br><br>
 
-    Category: <br><br>
-    <input type="radio" name="category" value="Star Wars"> Star Wars<br>
-    <input type="radio" name="category" value="Shrek"> Shrek<br>
-    <input type="radio" name="category" value="Domaci"> Domaci<br>
-    <input type="radio" name="category" value="Animals"> Animals<br>
-    <input type="radio" name="category" value="Elon Musk"> Elon Musk<br>
-    <input type="radio" name="category" value="Cartoon"> Cartoon<br>
-    <input type="radio" name="category" value="Deep-fried"> Deep-fried<br>
-    <input type="radio" name="category" value="Riteh"> Riteh<br>
-    <input type="radio" name="category" value="Slav"> Slav<br>
-    <input type="radio" name="category" value="Dark humor" checked> Dark humor<br><br><br>
+    <table>
+    <tr>
+    <td>
+    <h3 class="category" >Category: </h3>
+    <input class="categories" type="radio" name="category" value="Star Wars"> Star Wars<br>
+    <input class="categories" type="radio" name="category" value="Shrek"> Shrek<br>
+    <input class="categories" type="radio" name="category" value="Domaci"> Domaci<br>
+    <input class="categories" type="radio" name="category" value="Animals"> Animals<br>
+    <input class="categories" type="radio" name="category" value="Elon Musk"> Elon Musk<br>
+    <input class="categories" type="radio" name="category" value="Cartoon"> Cartoon<br>
+    <input class="categories" type="radio" name="category" value="Deep-fried"> Deep-fried<br>
+    <input class="categories" type="radio" name="category" value="Riteh"> Riteh<br>
+    <input class="categories" type="radio" name="category" value="Slav"> Slav<br>
+    <input class="categories" type="radio" name="category" value="Dark humor" checked> Dark humor<br><br><br>
+    </td>
+    <td>
+    <input class="submit" type="submit" value="Upload Image" name="submit"> <br><br>
+    </td>
+    </tr>
+    </table>
     </form>
     <?php echo "$ispis" ?>
   </div>

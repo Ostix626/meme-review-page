@@ -226,6 +226,43 @@ ul {
   margin:25px 25px;
 }
 
+/*.upload { 
+  width:950px;
+  padding:0px 30px;
+  color:black;
+  margin-left:100px;
+}
+
+.file {
+	width:950px;
+  padding:0px 30px;
+  color:black;
+  margin-left:200px;
+}
+
+.submit {
+	background-color: #00CCFF;
+  border:1px #03306b solid;
+  padding:10px 30px;
+  font-weight:bold;
+  margin:25px 25px;
+  margin-left:0px;
+}
+
+.category {
+	width:300px;
+  padding:0px 30px;
+  color:black;
+  margin-left:100px;
+}
+
+.categories {
+	width:20px;
+  padding:0px 30px;
+  color:black;
+  margin-left:125px;
+}*/
+
 
 /* Clear floats after the columns (CLEARFIXs)*/
 .row:after {
