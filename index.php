@@ -81,6 +81,9 @@
 
 
 </div>
+<?php
+  if(isset($_SESSION['user'])) {
+?>
   <script>
 function changeId(memesId) {
   var xmlhttp = new XMLHttpRequest();
@@ -103,5 +106,8 @@ function changeDown(memesId) {
   xmlhttp.send();
 }
 </script>
+<?php
+  }
+?>
 </body>
 </html>
