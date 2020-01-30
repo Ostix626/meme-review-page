@@ -33,9 +33,10 @@ body {
   box-shadow: 4px 3px 7px 0px rgba(0, 0, 0, 0.3);
   font-size: 20px;
 }
-
+.flex-container button { padding: 0px; border: 0px;}
+button { display: block; padding: 0px;}
 .flex-container img { width: 465px; }
-.flex-container table { width: 465px;  padding: 0px; }
+.flex-container table { width: 465px;  padding: 0px;  border-collapse: collapse; }
 .flex-container td { padding: 0px; width: 93px; height: 40px; }
 .tablica img { 
 	width: 100%;
@@ -208,6 +209,8 @@ ul {
 .login h1, p, .chbox, .btn {
   margin-left:25px;
 }
+
+
 
 .btn {
   background-color: #00CCFF;
