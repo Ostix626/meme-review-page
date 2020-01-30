@@ -45,7 +45,6 @@
         if ($result->num_rows > 0) {
           while($row = $result->fetch_array(MYSQLI_BOTH)) {
             $top += 1;
-            echo "<img id='top10' src='slike/" . $top . "-Number-PNG.png'>";
             echo "<div>";
               echo "<img src='" . $row['filepath'] . "' >";
               echo "<table class='tablica'>";
@@ -56,7 +55,7 @@
                     width="30px">
                    </td>';
                   echo "<td>" . $row['upvotes'] . "</td>";
-                  echo "<td></td>";
+                  echo "<td><img id='top10' src='slike/" . $top . "-Number-PNG.png'></td>";
                   echo "<td>" . $row['downvotes'] . "</td>";
                   echo '<td>
                     <a href="downvote.php">

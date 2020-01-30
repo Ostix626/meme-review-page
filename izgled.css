@@ -41,14 +41,15 @@ button { display: block; padding: 0px;}
 .tablica img { 
 	width: 100%;
 	height: 100%;
-	float: left;
+	float: center;
 	display: block;
 }
 
+#top10 { width: 40px; height:40px; margin-left: 30px}
 
-/*top 10 MEMES*/
+/*top 10 MEMES
 #top10 div img { width: 200px; height:200px; }
-
+*/
 
 .header {                  
   background-color: #0000;

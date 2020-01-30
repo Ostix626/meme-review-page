@@ -50,8 +50,7 @@
                 echo "<tr>";
                   echo "<td>
                     <button type='submit' name='upvote' onclick='changeId(" . $row['meme_id'] . ")'>
-                    <img src='slike/upvote.PNG'
-                    width='30px'>
+                    <img src='slike/upvote.PNG'>
                     </button>
                    </td>";
                   echo "<td id='upvote" . $row['meme_id'] . "'>" . $row['upvotes'] . "</td>";
@@ -59,8 +58,7 @@
                   echo "<td id='downvote" . $row['meme_id'] . "'>" . $row['downvotes'] . "</td>";
                   echo "<td>
                     <button type='submit' name='downvote' onclick='changeDown(" . $row['meme_id'] . ")'>
-                    <img src='slike/downvote.PNG'
-                    width='30px'>
+                    <img src='slike/downvote.PNG'>
                     </button>
                     </td>";
                 echo "</tr>";
