@@ -51,19 +51,19 @@
               echo "<img src='" . $row['filepath'] . "' >";
               echo "<table class='tablica'>";
                 echo "<tr>";
-                  echo '<td>
-                    <a href="upvote.php">
-                    <img src="slike/upvote.PNG"
-                    width="30px">
-                   </td>';
-                  echo "<td>" . $row['upvotes'] . "</td>";
+                  echo "<td>
+                    <button type='submit' name='upvote' onclick='changeId(" . $row['meme_id'] . ")'>
+                    <img src='slike/upvote.PNG'>
+                    </button>
+                   </td>";
+                  echo "<td id='upvote" . $row['meme_id'] . "'>" . $row['upvotes'] . "</td>";
                   echo "<td> </td>";
-                  echo "<td>" . $row['downvotes'] . "</td>";
-                  echo '<td>
-                    <a href="downvote.php">
-                    <img src="slike/downvote.PNG"
-                    width="30px">
-                    </td>';
+                  echo "<td id='downvote" . $row['meme_id'] . "'>" . $row['downvotes'] . "</td>";
+                  echo "<td>
+                    <button type='submit' name='downvote' onclick='changeDown(" . $row['meme_id'] . ")'>
+                    <img src='slike/downvote.PNG'>
+                    </button>
+                    </td>";
                 echo "</tr>";
               echo "</table>";
             echo "</div>";
@@ -84,5 +84,33 @@
 
 
 </div>
+<?php
+  if(isset($_SESSION['user'])) {
+?>
+  <script>
+function changeId(memesId) {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("upvote" + memesId).innerHTML = this.responseText;
+    }
+  };
+  xmlhttp.open("GET", "upvote.php?memesId=" + memesId, true);
+  xmlhttp.send();
+}
+function changeDown(memesId) {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("downvote" + memesId).innerHTML = this.responseText;
+    }
+  };
+  xmlhttp.open("GET", "downvote.php?memesId=" + memesId, true);
+  xmlhttp.send();
+}
+</script>
+<?php
+  }
+?>
 </body>
 </html>

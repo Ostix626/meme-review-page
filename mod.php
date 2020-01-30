@@ -36,7 +36,7 @@
     <div class="flex-container">
 
       <?php
-        $query = "SELECT * FROM memes ORDER BY `upload_date` DESC LIMIT 50";
+        $query = "SELECT * FROM memes ORDER BY `meme_of_the_decade` DESC LIMIT 100";
         $stmt = $conn->prepare($query);
         $stmt->execute();
         $result = $stmt->get_result();
