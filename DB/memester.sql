@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 29, 2020 at 01:01 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.1
+-- Host: localhost
+-- Generation Time: Jan 30, 2020 at 12:09 AM
+-- Server version: 5.7.25
+-- PHP Version: 7.1.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -84,12 +84,9 @@ INSERT INTO `memes` (`meme_id`, `upvotes`, `downvotes`, `category`, `upload_date
 (44, 0, 0, 'Domaci', '2020-01-29 12:09:16', 'Tojo', 0, 'uploads/1dd85b23a84e8f242cd6a42f8073e9cb574e315d.jpeg'),
 (45, 0, 0, 'Domaci', '2020-01-29 12:09:24', 'Tojo', 0, 'uploads/80d1a09e7525d7735ae22589bef5dda5fd73878e.jpeg'),
 (46, 0, 0, 'Domaci', '2020-01-29 12:09:30', 'Tojo', 0, 'uploads/5d8413e04d670ac4f2cab3a854d370026a5a8d69.jpeg'),
-(47, 0, 0, 'Domaci', '2020-01-29 12:09:36', 'Tojo', 0, 'uploads/ff8d84e5130efb92ce3141a9b628fddbec70d92d.jpeg'),
 (48, 0, 0, 'Domaci', '2020-01-29 12:09:43', 'Tojo', 0, 'uploads/6876024bc5c00e4c9f090df46bb8d8bd9f9006b7.jpeg'),
 (49, 0, 0, 'Domaci', '2020-01-29 12:09:49', 'Tojo', 0, 'uploads/411e7a946054e4b60d5a1aed2dfe67fb5a477fbd.jpeg'),
-(50, 0, 0, 'Domaci', '2020-01-29 12:09:56', 'Tojo', 0, 'uploads/e5e5263f0eff7d1af435c4c9709c0d8181ece0ae.jpeg'),
 (51, 0, 0, 'Domaci', '2020-01-29 12:10:04', 'Tojo', 0, 'uploads/9d3094bc89654757cf9d70a8de65c1335c3621c1.jpeg'),
-(52, 0, 0, 'Domaci', '2020-01-29 12:10:12', 'Tojo', 0, 'uploads/ee6117e3f69d8c7dc868b6c48ec905504769d0f9.jpeg'),
 (53, 0, 0, 'Animals', '2020-01-29 12:20:33', 'Tojo', 0, 'uploads/8cb0819101546e2e50f1aca2cad2ac16abe70163.jpeg'),
 (54, 0, 0, 'Animals', '2020-01-29 12:20:39', 'Tojo', 0, 'uploads/5462de3775e23d4e93361225bebc0c8c7e195245.png'),
 (55, 0, 0, 'Animals', '2020-01-29 12:20:49', 'Tojo', 0, 'uploads/25f630bcef5dcd9983aea89dcd623435d7198368.png'),
@@ -135,13 +132,20 @@ INSERT INTO `memes` (`meme_id`, `upvotes`, `downvotes`, `category`, `upload_date
 (95, 0, 0, 'Slav', '2020-01-29 12:55:31', 'Tojo', 0, 'uploads/a4d5365f5a32fc9342eda14582bab67e91e5dd4a.jpeg'),
 (96, 0, 0, 'Slav', '2020-01-29 12:55:38', 'Tojo', 0, 'uploads/7c84403e88b4f3a2efb72b6d644283ec80106b57.jpeg'),
 (97, 0, 0, 'Dark humor', '2020-01-29 12:59:53', 'Tojo', 0, 'uploads/113a849250b295f7320748c9705c27ebd19ab146.jpeg'),
-(98, 0, 0, 'Dark humor', '2020-01-29 12:59:57', 'Tojo', 0, 'uploads/5e0a7729a4eba6d3e5e6888561a48837f860b1d1.jpeg'),
+(98, 6, 0, 'Dark humor', '2020-01-29 12:59:57', 'Tojo', 0, 'uploads/5e0a7729a4eba6d3e5e6888561a48837f860b1d1.jpeg'),
 (99, 0, 0, 'Dark humor', '2020-01-29 13:00:02', 'Tojo', 0, 'uploads/ee2ea1d6c2b7c6e9fb57d93f99a9ec88076e659c.jpeg'),
 (100, 0, 0, 'Dark humor', '2020-01-29 13:00:06', 'Tojo', 0, 'uploads/05c0c9cd7214f5f6a57e9e58a8126908fc084c7a.jpeg'),
-(101, 0, 0, 'Dark humor', '2020-01-29 13:00:12', 'Tojo', 0, 'uploads/8ead3fa25eaea57aff38c466ceac49e5dc6663c8.jpeg'),
+(101, 0, 2, 'Dark humor', '2020-01-29 13:00:12', 'Tojo', 0, 'uploads/8ead3fa25eaea57aff38c466ceac49e5dc6663c8.jpeg'),
 (102, 0, 0, 'Dark humor', '2020-01-29 13:00:16', 'Tojo', 0, 'uploads/609b45a37837c04bfffad194113bae77a7fe76fa.jpeg'),
 (103, 0, 0, 'Dark humor', '2020-01-29 13:00:20', 'Tojo', 0, 'uploads/f76b4bfb16d3781dba60b25cb813972e9fb7112f.jpeg'),
-(104, 0, 0, 'Dark humor', '2020-01-29 13:00:25', 'Tojo', 0, 'uploads/7901c6b2374a774439071c90365321371b2aec2e.jpeg');
+(104, 0, 0, 'Dark humor', '2020-01-29 13:00:25', 'Tojo', 0, 'uploads/7901c6b2374a774439071c90365321371b2aec2e.jpeg'),
+(105, 0, 0, 'Domaci', '2018-01-29 19:23:31', 'General Kenobi', 0, 'uploads/34a8509bd6df083ef659788e637cc88616a32b1a.jpeg'),
+(106, 0, 0, 'Domaci', '2018-01-29 19:24:47', 'General Kenobi', 0, 'uploads/52d73bca597e75e5c912446d20b1c64a9bcd32c9.jpeg'),
+(107, 0, 0, 'Domaci', '2018-01-29 19:24:55', 'General Kenobi', 0, 'uploads/60b64268ce4624638cbd193b13475b32350a1f9e.jpeg'),
+(109, 0, 0, 'Domaci', '2018-01-29 19:25:12', 'General Kenobi', 0, 'uploads/c583d416e70e269ba16463a16d1f0b2cde9ea291.jpeg'),
+(110, 0, 2, 'Domaci', '2020-01-29 20:58:39', 'General Kenobi', 0, 'uploads/b8db224bf9e8bf33a7a557a23777b96138d2c1fd.jpeg'),
+(111, 9, 0, 'Domaci', '2020-01-29 20:59:12', 'General Kenobi', 0, 'uploads/0494c8e676270d6ab7c6aba51f77e4b12d7f6b6b.jpeg'),
+(112, 2, 1, 'Animals', '2020-01-29 20:59:20', 'General Kenobi', 0, 'uploads/8d1f7584e22538f2ea0c388bae2da28e4e5ecd6e.png');
 
 -- --------------------------------------------------------
 
@@ -162,7 +166,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`user_mail`, `user_name`, `user_pass`, `mail_activation`) VALUES
 ('dominik.glavas@hotmail.com', 'Kismo', 'de15d8b8991d49d237e68cfc2f5ca571', '0'),
-('m8ijazbarac@gmail.com', 'Tojo', 'b44a5b2e0128361498ba83c9486391cd', '0');
+('m8ijazbarac@gmail.com', 'Tojo', 'b44a5b2e0128361498ba83c9486391cd', '0'),
+('martinluk.luk@gmail.com', 'General Kenobi', 'c6f7c372641dd25e0fddf0215375561f', '0');
 
 --
 -- Indexes for dumped tables
@@ -182,7 +187,7 @@ ALTER TABLE `memes`
 -- AUTO_INCREMENT for table `memes`
 --
 ALTER TABLE `memes`
-  MODIFY `meme_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
+  MODIFY `meme_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
