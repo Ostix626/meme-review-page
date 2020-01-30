@@ -117,7 +117,7 @@ if(isset($_POST["submit"])) {
     <input class="categories" type="radio" name="category" value="Elon Musk"> Elon Musk<br>
     <input class="categories" type="radio" name="category" value="Cartoon"> Cartoon<br>
     <input class="categories" type="radio" name="category" value="Deep-fried"> Deep-fried<br>
-    <input class="categories" type="radio" name="category" value="Riteh"> Riteh<br>
+    <input class="categories" type="radio" name="category" value="Student"> Student<br>
     <input class="categories" type="radio" name="category" value="Slav"> Slav<br>
     <input class="categories" type="radio" name="category" value="Dark humor" checked> Dark humor<br><br><br>
     </td>

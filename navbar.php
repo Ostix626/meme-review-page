@@ -16,7 +16,7 @@ if (!isset($_SESSION['user'])) {
       echo '<a href="category.php?category=Elon Musk">Elon Musk</a>';
       echo '<a href="category.php?category=Cartoon">Cartoon</a>';
       echo '<a href="category.php?category=Deep-fried">Deep-fried</a>';
-      echo '<a href="category.php?category=Riteh">Riteh</a>';
+      echo '<a href="category.php?category=Student">Student</a>';
       echo '<a href="category.php?category=Slav">Slav</a>';
       echo '<a href="category.php?category=Dark humor">Dark humor</a>';
     echo '</div>';
@@ -43,7 +43,7 @@ if (!isset($_SESSION['user'])) {
       echo '<a href="category.php?category=Elon Musk">Elon Musk</a>';
       echo '<a href="category.php?category=Cartoon">Cartoon</a>';
       echo '<a href="category.php?category=Deep-fried">Deep-fried</a>';
-      echo '<a href="category.php?category=Riteh">Riteh</a>';
+      echo '<a href="category.php?category=Student">Student</a>';
       echo '<a href="category.php?category=Slav">Slav</a>';
       echo '<a href="category.php?category=Dark humor">Dark humor</a>';
     echo '</div>';
