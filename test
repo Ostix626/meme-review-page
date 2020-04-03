@@ -1,4 +1,3 @@
-@charset "UTF-8";
 
 #menu {
 
@@ -54,6 +53,7 @@
 #narudzbatabela{
   font: bold 30px/1 monospace;
   background-color: rgba(95, 142, 243, 0.651);
+  text-align: left; 
 }
 
 #promjenaPodataka{
@@ -120,7 +120,7 @@
 }
 
 body {
-    background-color:rgba(0, 0, 0, 0.589);
+    background-image: url(slike/Neutrino-2-Cell.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -131,7 +131,7 @@ body {
     background-color:rgba(0, 0, 0, 0.589);
   
     align-content: center;
-    flex: 20%; 
+    flex: 25%; 
     padding: 15px;
     font: bold 40px/1 monospace;
   color: rgb(48, 121, 184);
@@ -181,6 +181,7 @@ flex-wrap: nowrap;
     background-color: rgba(255, 255, 255, 0);
     padding: 20px;
     flex-wrap: wrap;
+  
 
 }
 
@@ -254,10 +255,14 @@ flex-wrap: nowrap;
     font-size: 15px;
     font: monospace;
     font: bold 20px/1 monospace;
+    border-radius: 12px;
+    border-color: rgba(0, 38, 255, 0);
 }
 .myButton:hover {
-    background-color:rgba(0, 0, 0, 0.322);
+    background-color:rgba(4, 0, 255, 0.322);
     color: white;
+    box-shadow: 0 5px 15px rgba(149, 0, 255, 0.548);
+    transform: translateY(5px);
 }
 
 .Button2 {
@@ -268,10 +273,14 @@ flex-wrap: nowrap;
     text-decoration: none;
     text-align: center;
     font: bold 20px/1 monospace;
+    border-radius: 12px;
+    border-color: rgba(0, 38, 255, 0);
 }
 .Button2:hover {
-    background-color:rgba(0, 0, 0, 0.322);
-    color: white;
+  background-color:rgba(4, 0, 255, 0.322);
+  color: white;
+  box-shadow: 0 5px 15px rgba(149, 0, 255, 0.548);
+  transform: translateY(5px);
 }
 
 
@@ -283,12 +292,34 @@ flex-wrap: nowrap;
   text-decoration: none;
   text-align: center;
   font: bold 20px/1 monospace;
+  border-radius: 12px;
+  border-color: rgba(0, 38, 255, 0);
 }
 .Button3:hover {
-  background-color:rgba(0, 0, 0, 0.322);
+  background-color:rgba(4, 0, 255, 0.322);
   color: white;
+  box-shadow: 0 5px 15px rgba(149, 0, 255, 0.548);
+  transform: translateY(5px);
 }
 
+.Button4 {
+  width: 25px;
+ 
+  background-color:rgba(0, 132, 255, 0.568);
+  color: rgb(0, 0, 0);
+  padding: 5px;
+  text-decoration: none;
+  text-align: center;
+  font: bold 20px/1 monospace;
+  border-radius: 12px;
+  border-color: rgba(0, 38, 255, 0);
+}
+.Button4:hover {
+background-color:rgba(4, 0, 255, 0.322);
+color: white;
+box-shadow: 0 5px 15px rgba(149, 0, 255, 0.548);
+transform: translateY(5px);
+}
 
 
 #artikl {
@@ -296,9 +327,11 @@ flex-wrap: nowrap;
     border-width: 7px;
     border-color: rgb(69, 196, 255);
     background-color:rgba(255, 255, 255, 0.849);
+    border-radius: 20px;
 
     position: relative;
-    width: 290px;
+    width: 45%;
+    height: 400px;
     text-align: center; 
     line-height: 1.5;
     margin: 10px;
@@ -313,9 +346,11 @@ flex-wrap: nowrap;
     border-width: 7px;
     border-color: rgb(69, 196, 255);
     background-color:rgba(255, 255, 255, 0.849);
+    border-radius: 20px;
 
     position: relative;
-    width: 499px;
+    width: 95%;
+    height: 200%;
     text-align: center; 
     align-items: center;
     line-height: 1.5;
@@ -337,8 +372,16 @@ flex-wrap: nowrap;
   .image {
       display: block;
     height: 290px;
-    width: 290px;
+    width: 100%;
+    border-radius: 5px;
+
   }
+
+  .imageadmin {
+    display: block;
+  height: 200px;
+  width: 200px;
+}
 
   .imageuredi {
     display: block;
@@ -360,7 +403,7 @@ flex-wrap: nowrap;
     right: 0;
     background-color: rgba(0, 133, 186, 0.658);
     overflow: hidden;
-    width: 290px;
+    width: 100%;
     height: 0%;
     transition: .5s ease;
   }
@@ -462,13 +505,24 @@ flex-wrap: nowrap;
 }
 
 .mail {
-  margin-top: 400px;
-  margin-left: 200px;
+  margin-top: 10%;
+  margin-left: 10%;
   position: fixed;
 }
 
+.logo {
+
+  width: 150px;
+   height: 150px;
+   border-radius: 50%;
+}
+
+.logo:hover{
+  box-shadow: 0 30px 30px rgba(149, 0, 255, 0.548);
+  opacity: 0.6;
+}
 
 .kosara:hover{
-
+  box-shadow: 0 30px 30px rgba(149, 0, 255, 0.548);
   opacity: 0.6;
 }
